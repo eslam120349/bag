@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --color-ink: #1c1e21;
+  --color-muted: #6b7078;
+  --color-line: #e6e7ea;
+}
+
+@keyframes swap {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.animate-swap { animation: swap 0.35s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-swap { animation: none; }
+  * { transition: none !important; }
+}
