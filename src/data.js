@@ -26,7 +26,7 @@ export const PRODUCTS = [
     shape: "NØVA jeans 0.2",
     name: "NØVA jeans 0.2",
     tagline: "للجامعة والسفر والمشاوير الطويلة",
-    price: 990,
+    price: 350,
     color: "#2B2E34",
     shade: "#1B1D21",
     tint: "#ffffffff",
