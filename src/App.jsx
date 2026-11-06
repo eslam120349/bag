@@ -10,6 +10,12 @@ import Footer from "./components/Footer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import CartDrawer from "./components/CartDrawer.jsx";
 import ShopPage from "./components/ShopPage.jsx";
+import ContactPage from "./components/ContactPage.jsx";
+import ReturnPolicyPage from "./components/ReturnPolicyPage.jsx";
+import ShippingPage from "./components/ShippingPage.jsx";
+import FaqPage from "./components/FaqPage.jsx";
+import PrivacyPage from "./components/PrivacyPage.jsx";
+import TermsPage from "./components/TermsPage.jsx";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -64,38 +70,82 @@ export default function App() {
   const totalCartItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-ink antialiased">
-      <Navbar
-        cartCount={totalCartItems}
-        onCartClick={() => setCartOpen(true)}
-        onNavigate={navigate}
-        currentPage={page}
-      />
-
-      {/* Home Page */}
-      {page === "home" && (
-        <>
-          <HeroSection onNavigate={navigate} />
-          <FeaturedProducts onAddToCart={addToCart} onViewDetails={viewDetails} />
-          <CategorySection />
-          <PromoBanner onNavigate={navigate} />
-        </>
-      )}
-
-      {/* Shop Page */}
-      {page === "shop" && (
-        <ShopPage onAddToCart={addToCart} onViewDetails={viewDetails} />
-      )}
-
-      {/* Product Details Page */}
-      {page === "product" && selectedProduct && (
-        <ProductDetails
-          product={selectedProduct}
-          onAddToCart={addToCart}
-          onBack={() => navigate("shop")}
-          onSelectProduct={(p) => setSelectedProduct(p)}
+    <div className="min-h-screen bg-white font-sans text-ink antialiased flex flex-col justify-between">
+      <div>
+        <Navbar
+          cartCount={totalCartItems}
+          onCartClick={() => setCartOpen(true)}
+          onNavigate={navigate}
+          currentPage={page}
         />
-      )}
+
+        {/* Home Page */}
+        {page === "home" && (
+          <main>
+            <HeroSection onNavigate={navigate} />
+            <FeaturedProducts onAddToCart={addToCart} onViewDetails={viewDetails} />
+            <CategorySection />
+            <PromoBanner onNavigate={navigate} />
+          </main>
+        )}
+
+        {/* Shop Page */}
+        {page === "shop" && (
+          <main>
+            <ShopPage onAddToCart={addToCart} onViewDetails={viewDetails} />
+          </main>
+        )}
+
+        {/* Product Details Page */}
+        {page === "product" && selectedProduct && (
+          <main>
+            <ProductDetails
+              product={selectedProduct}
+              onAddToCart={addToCart}
+              onBack={() => navigate("shop")}
+              onSelectProduct={(p) => setSelectedProduct(p)}
+            />
+          </main>
+        )}
+
+        {/* Customer Service Pages */}
+        {page === "contact" && (
+          <main>
+            <ContactPage />
+          </main>
+        )}
+
+        {page === "returns" && (
+          <main>
+            <ReturnPolicyPage />
+          </main>
+        )}
+
+        {page === "shipping" && (
+          <main>
+            <ShippingPage />
+          </main>
+        )}
+
+        {page === "faq" && (
+          <main>
+            <FaqPage />
+          </main>
+        )}
+
+        {/* Legal Pages */}
+        {page === "privacy" && (
+          <main>
+            <PrivacyPage />
+          </main>
+        )}
+
+        {page === "terms" && (
+          <main>
+            <TermsPage />
+          </main>
+        )}
+      </div>
 
       <Footer onNavigate={navigate} />
 
