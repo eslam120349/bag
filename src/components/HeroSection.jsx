@@ -12,11 +12,11 @@ export default function HeroSection({ onNavigate }) {
             مجموعة NØVA الجديدة
           </span>
           <h1 className="text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-            أناقة
+            FUTURE
             <br />
-            <span className="text-[#A9835C]">تحملينها</span>
+            in
             <br />
-            كل يوم
+            <span className="text-[#A9835C]">MOTION</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-8 text-muted">
             اكتشفي مجموعة شنط NØVA المصممة بعناية لتناسب حياتك اليومية. جودة عالية وتصميم عصري.
@@ -45,15 +45,15 @@ export default function HeroSection({ onNavigate }) {
           {/* Stats */}
           <div className="mt-12 flex gap-10">
             <div>
-              <span className="text-2xl font-bold text-ink">+500</span>
+              <span className="text-2xl font-bold text-ink">+10</span>
               <p className="text-sm text-muted mt-1">عميلة سعيدة</p>
             </div>
             <div className="border-r border-line pr-10">
-              <span className="text-2xl font-bold text-ink">٣</span>
+              <span className="text-2xl font-bold text-ink">4</span>
               <p className="text-sm text-muted mt-1">تصميمات فريدة</p>
             </div>
             <div className="border-r border-line pr-10">
-              <span className="text-2xl font-bold text-ink">١٤</span>
+              <span className="text-2xl font-bold text-ink">30</span>
               <p className="text-sm text-muted mt-1">يوم استبدال</p>
             </div>
           </div>

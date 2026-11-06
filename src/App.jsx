@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { PRODUCTS } from "./data.js";
 
+import Preloader from "./components/Preloader.jsx";
 import Navbar from "./components/Navbar.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import FeaturedProducts from "./components/FeaturedProducts.jsx";
@@ -71,6 +72,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-ink antialiased flex flex-col justify-between">
+      {/* NOVA intro */}
+      <Preloader />
+
       <div>
         <Navbar
           cartCount={totalCartItems}

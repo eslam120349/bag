@@ -28,11 +28,10 @@ export default function Navbar({ cartCount = 0, onCartClick, onNavigate, current
   return (
     <>
       <nav
-        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${scrolled
             ? "bg-white/95 shadow-sm backdrop-blur-md border-b border-line"
             : "bg-white"
-        }`}
+          }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
           {/* Brand */}
@@ -56,11 +55,10 @@ export default function Navbar({ cartCount = 0, onCartClick, onNavigate, current
                       }, 100);
                     }
                   }}
-                  className={`text-sm font-medium transition-colors hover:text-ink ${
-                    currentPage === link.page && !link.section
+                  className={`text-sm font-medium transition-colors hover:text-ink ${currentPage === link.page && !link.section
                       ? "text-ink"
                       : "text-muted"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </button>

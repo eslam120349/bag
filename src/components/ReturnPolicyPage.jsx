@@ -10,7 +10,7 @@ export default function ReturnPolicyPage() {
         </svg>
       ),
       title: "مدة الاستبدال",
-      content: "يحق للعميل طلب استبدال المنتج خلال ١٤ يوم من تاريخ الاستلام.",
+      content: "يحق للعميل طلب استبدال المنتج خلال ٣٠ يوم من تاريخ الاستلام.",
     },
     {
       icon: (
@@ -47,7 +47,7 @@ export default function ReturnPolicyPage() {
   ];
 
   const steps = [
-    { num: "١", text: "تواصل معانا على واتساب خلال ١٤ يوم من الاستلام" },
+    { num: "١", text: "تواصل معانا على واتساب خلال ٣٠ يوم من الاستلام" },
     { num: "٢", text: "اشرحلنا سبب الاستبدال وابعتلنا صورة للمنتج" },
     { num: "٣", text: "هنرتب مع شركة الشحن استلام المنتج منك" },
     { num: "٤", text: "هنبعتلك المنتج البديل بعد استلام الأول" },
@@ -71,7 +71,7 @@ export default function ReturnPolicyPage() {
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A9835C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
-            <span className="text-2xl font-bold text-ink">١٤ يوم</span>
+            <span className="text-2xl font-bold text-ink">٣٠ يوم</span>
           </div>
           <p className="text-muted">مدة الاستبدال من تاريخ استلام المنتج</p>
         </div>
