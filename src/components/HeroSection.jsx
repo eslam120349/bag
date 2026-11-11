@@ -46,7 +46,7 @@ export default function HeroSection({ onNavigate }) {
           <div className="mt-12 flex gap-10">
             <div>
               <span className="text-2xl font-bold text-ink">+10</span>
-              <p className="text-sm text-muted mt-1">عميلة سعيدة</p>
+              <p className="text-sm text-muted mt-1">عملاء سعداء</p>
             </div>
             <div className="border-r border-line pr-10">
               <span className="text-2xl font-bold text-ink">4</span>
